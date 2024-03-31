@@ -14,3 +14,6 @@ data/
 *.model
 *.h5
 *.bin
+
+# Pickle Files
+*.pkl
