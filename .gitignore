@@ -11,9 +11,11 @@ data/
 .ipynb_checkpoints
 
 # Models
+model-weights/
 *.model
 *.h5
 *.bin
+*.joblib
 
 # Pickle Files
 *.pkl
