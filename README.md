@@ -71,6 +71,7 @@ My modeling process features a wide range of methods, including Multinomial Naiv
 # Results
 Our most performant model turned out to be our MLP neural network. With recall and accuracy of 66%, this model should be best for general-purpose implementation.
 
+
 **Image: Confusion Matrix for Neural Network**
 
 
