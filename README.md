@@ -1,7 +1,8 @@
+# Sarcasm Detection for Content Moderation
+Author: Adam Pell
+
 # Introduction
 For my final project, I am building a series of models with the goal of detecting sarcasm in a collection of Reddit comments. To achieve this, I am leveraging multiple Natural Language Processing (NLP) techniques, including different types of tokenization, vectorization, and word embeddings.
-
-My modeling process features a wide range of methods, including Multinomial Naive Bayes, XGBoost, and two types of neural networks (multilayer perceptrons and long short-term memory).
 
 The work all appears in this notebook, which includes instructions on data retrieval, preprocessing, and modeling, along with an option to import pre-trained model weights for quicker prediction results.
 
@@ -13,7 +14,12 @@ The processes required for this analysis can be broken down into x parts:
 4. **Modeling**: Iteratively fitting different machine learning algorithms to our vectorized data and mapping the results.
 5. **Evaluation and Conclusion**: Discussing the performance of our models and forming recommendations baed on results.
 
-**Sample Image:**
+
+**Image: First 5 Rows of Dataset**
+
+
+<img src="images/SampleImage.png" width="600" height="400">
+
 
 # Objectives
 The objectives of this project are:
@@ -43,6 +49,19 @@ For this analysis, the target metrics are:
 - **Recall:** For our purposes, we of course want to maximize the instances of sarcasm (or non-sarcasm) that our models can detect. Ideally, we want recall for both negative and positive cases to be high, but the more important of the two would be recall for the **positive case**, meaning that we capture a high number of sarcastic comments.
 - **Accuracy:** This is a much more general statistic for model performance, so it acts as a good becnhmark for overall quality as we iterate.
 
+
+**Image: Wordcloud for non-sarcastic comments**
+
+
+<img src="images/NormalCould.png" width="400" height="400">
+
+
+**Image: Wordcloud for sarcastic comments**
+
+
+<img src="images/SarcasticCloud.png" width="600" height="400">
+
+
 ## Limitations
 For our dataset, one specific limitation sticks out:
 
@@ -53,8 +72,37 @@ Beyond that, datasets scraped from social media can have several limitations pre
 - **They can be "messy".** Not just in terms of punctuation and grammar (which can be cleaned away), but there also is a myriad of slang, profanity, abbreviations, and words that are extremely specific to a certain context-- the name of a video game character or ability, for example. When we are looking to understand patterns and context, these can serve as limiting factors.
 - **They can be too short.** The Reddit comments we are dealing with are often responses to another comment, and therefore are often fairly short, many with only a handful of words and some with just one or two. When we are looking for sarcasm, this can be challenging for a model to understand.
 
-# Methodology
-# Eval and Results for Modeling Steps
+# Methods
+My modeling process features a wide range of methods, including Multinomial Naive Bayes, XGBoost, and two types of neural networks (multilayer perceptrons and long short-term memory). Preprocessing steps include tokenization, cleaning, lemmatization, and vectorization using both TF-IDF and Word2Vec.
+
+**Image: Most Common 25 Unigrams**
+
+
+<img src="images/Unigrams.png" width="600" height="600">
+
+
+# Results
+Our most performant model turned out to be our MLP neural network. With recall and accuracy of 66%, this model should be best for general-purpose implementation.
+
+**Image: Confusion Matrix for Neural Network**
+
+
+<img src="images/NNConfusionMatrix.png" width="600" height="400">
+
+
+The table below shows a table of how our models performed as we iterated through the analysis:
+
+
+| Model Type     | Recall (Class 0) | Recall (Class 1) | Accuracy | Time To Run |
+|----------------|------------------|------------------|----------|-------------|
+| Naive Bayes    | 74%              | 55%              | 64%      | >1s         |
+| XGBoost        | 94%              | 21%              | 58%      | 5min.       |
+| MLP Neural Net | 75%              | 57%              | 66%      | 21min.      |
+| RNN Neural Net | 91%              | 16%              | 54%      | 31min.      |
+
+As we can see, each model has its own quirks and we don't see a steady improvement across models. The most notable phenomenon is the large jumps in class 0 recall for the XGBoost and RNN models. This could open up different implementation strategies down the line. For our purposes, however, I think it is appropriate to use a more balanced model if it more performant overall. This way, it can consistently assist human moderators to a consistent, known degree.
+
+Depending on the number of epochs or complexity, further training could take an extremely long time if we hope to see even marginal improvements in performance.
 
 # Conclusions
 While our models did not give us excellent performance on our target metrics, this project has provided us valuable information on the complexities on sarcasm detection, shown us effective and ineffective techniques, and demonstrated the limitations of our dataset.
