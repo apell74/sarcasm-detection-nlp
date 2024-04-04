@@ -18,7 +18,7 @@ The processes required for this analysis can be broken down into x parts:
 **Image: First 5 Rows of Dataset**
 
 
-<img src="images/SampleImage.png" width="1500" height="400">
+<img src="images/SampleImage.png" width="2500" height="400">
 
 
 # Objectives
@@ -50,16 +50,10 @@ For this analysis, the target metrics are:
 - **Accuracy:** This is a much more general statistic for model performance, so it acts as a good becnhmark for overall quality as we iterate.
 
 
-**Image: Wordcloud for non-sarcastic comments**
+**Image: Wordcloud for Sarcastic Comments**
 
 
-<img src="images/NormalCould.png" width="600" height="400">
-
-
-**Image: Wordcloud for sarcastic comments**
-
-
-<img src="images/SarcasticCloud.png" width="600" height="400">
+<img src="images/SarcasticCloud.png" width="700" height="400">
 
 
 ## Limitations
