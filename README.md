@@ -18,7 +18,7 @@ The processes required for this analysis can be broken down into x parts:
 **Image: First 5 Rows of Dataset**
 
 
-<img src="images/SampleImage.png" width="600" height="400">
+<img src="images/SampleImage.png" width="1000" height="400">
 
 
 # Objectives
@@ -53,7 +53,7 @@ For this analysis, the target metrics are:
 **Image: Wordcloud for non-sarcastic comments**
 
 
-<img src="images/NormalCould.png" width="400" height="400">
+<img src="images/NormalCould.png" width="600" height="400">
 
 
 **Image: Wordcloud for sarcastic comments**
