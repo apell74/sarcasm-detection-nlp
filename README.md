@@ -123,7 +123,8 @@ Below I have included some recommendations of next steps that could yield better
 
 ## Repository Structure
 
-<!-- .
+```
+.
 ├── images/
 ├── data/
 ├── model-weights/
@@ -134,4 +135,4 @@ Below I have included some recommendations of next steps that could yield better
 ├── Sarcasm Detection Presentation.pdf
 ├── local_index.ipynb
 └── requirements.txt
- -->
+```
