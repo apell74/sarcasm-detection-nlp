@@ -43,10 +43,20 @@ For this analysis, the target metrics are:
 - **Accuracy:** This is a much more general statistic for model performance, so it acts as a good becnhmark for overall quality as we iterate.
 
 
-**Image: Wordcloud for Sarcastic Comments**
+**Image: Wordcloud for Non-Sarcastic Comments**
+
 
 
 <img src="images/SarcasticCloud.png" width="700" height="400">
+
+
+
+**Image: Wordcloud for Sarcastic Comments**
+
+
+
+<img src="images/SarcasticCloud.png" width="700" height="400">
+
 
 
 ## Limitations
@@ -65,7 +75,7 @@ My modeling process features a wide range of methods, including Multinomial Naiv
 **Image: Most Common 25 Unigrams**
 
 
-<img src="images/Unigrams.png" width="600" height="600">
+<img src="images/Unigrams.png" width="600" height="650">
 
 
 # Results
@@ -75,7 +85,7 @@ Our most performant model turned out to be our MLP neural network. With recall a
 **Image: Confusion Matrix for Neural Network**
 
 
-<img src="images/NNConfusionMatrix.png" width="600" height="400">
+<img src="images/NNConfusionMatrix.png" width="600" height="600">
 
 
 The table below shows a table of how our models performed as we iterated through the analysis:
@@ -122,3 +132,16 @@ Below I have included some recommendations of next steps that could yield better
 - LinkedIn: [Adam Pell](www.linkedin.com/in/adam-pell-911868154)
 
 ## Repository Structure
+'''
+.
+├── images/
+├── data/
+├── model-weights/
+├── .gitignore
+├── Colab_index.ipynb
+├── Colab_notebook_link.md
+├── README.md
+├── Sarcasm Detection Presentation.pdf
+├── local_index.ipynb
+└── requirements.txt
+'''
