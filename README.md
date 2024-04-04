@@ -14,13 +14,6 @@ The processes required for this analysis can be broken down into x parts:
 4. **Modeling**: Iteratively fitting different machine learning algorithms to our vectorized data and mapping the results.
 5. **Evaluation and Conclusion**: Discussing the performance of our models and forming recommendations baed on results.
 
-
-**Image: First 5 Rows of Dataset**
-
-
-<img src="images/SampleImage.png" width="3500" height="400">
-
-
 # Objectives
 The objectives of this project are:
 1. To see whether there are differences in the vocabulary of sarcastic responses vs. serious ones.
