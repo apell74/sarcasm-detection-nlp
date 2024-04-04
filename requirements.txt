@@ -1,13 +1,13 @@
 os
 shutil
 joblib
+IPython
 booster
 json
 tensorflow
 keras
 pandas
 numpy
-spacy
 matplotlib.pyplot
 seaborn
 wordcloud

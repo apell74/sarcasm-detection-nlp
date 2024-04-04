@@ -103,9 +103,10 @@ More specifically, I recommend that this hybrid approach be leveraged by Reddit 
 
 - **Detecting bullying messages and gathering data on bad actors, leading to bans or suspensions**
 - **Detect disturbing content, such as threats, and assess their veracity**
-- **Recommend certain content for people who interact with or post sarcastic content**
 
-In a multi-tiered system, a less-accurate model that processes quickly could serve as a filter that catches and flags certain content before travels up the chain to either an improved model or a team of humans. In this way, moderators are saved some time and can focus on more complex problems or moderate more content per day, as this model allows them to cast a wide net and whittle down content as they go. This strategy could also work for flagging a wide range of comments and leaving humans to make the final decision.
+A model with this performance needs work better before it can be used reliably for automated content recommendation. 
+
+In a multi-tiered content moderation system, a less-accurate model that processes quickly could serve as a filter that catches and flags certain content before travels up the chain to either an improved model or a team of humans. In this way, moderators are saved some time and can focus on more complex problems or moderate more content per day, as this model allows them to cast a wide net and whittle down content as they go. This strategy could also work for flagging a wide range of comments and leaving humans to make the final decision.
 
 Even if these strategies are not implemented, we have provided a baseline and proof-of-concept for sarcasm detection over a diverse and difficult range of texts. Further investment in Research and Development, allowing for longer, more complex, and more costly training methods, could yield significant performance gains, especially with a larger dataset that is labeled carefully.
 
