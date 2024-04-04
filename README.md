@@ -18,7 +18,7 @@ The processes required for this analysis can be broken down into x parts:
 **Image: First 5 Rows of Dataset**
 
 
-<img src="images/SampleImage.png" width="2500" height="400">
+<img src="images/SampleImage.png" width="3500" height="400">
 
 
 # Objectives
