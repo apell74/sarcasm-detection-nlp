@@ -60,7 +60,9 @@ Beyond that, datasets scraped from social media can have several limitations pre
 - **They can be too short.** The Reddit comments we are dealing with are often responses to another comment, and therefore are often fairly short, many with only a handful of words and some with just one or two. When we are looking for sarcasm, this can be challenging for a model to understand.
 
 # Methods
-My modeling process features a wide range of methods, including Multinomial Naive Bayes, XGBoost, and two types of neural networks (multilayer perceptrons and long short-term memory). Preprocessing steps include tokenization, cleaning, lemmatization, and vectorization using both TF-IDF and Word2Vec.
+My modeling process features a wide range of methods, including Multinomial Naive Bayes, XGBoost, and two types of neural networks (multilayer perceptrons and long short-term memory). Preprocessing steps include tokenization, cleaning, lemmatization, and vectorization using both TF-IDF and Word2Vec embeddings.
+
+Our long short-term memory model is a type of Recurrent Neural Network (RNN), which recursively updates its hidden state to reflect context from previous inputs as well as the current input. The process is outlined in [this paper by Robin Schmidt](https://arxiv.org/abs/1912.05911). The Word2Vec embeddings I use for this model essentially employs a small neural network to derive similar and correlated words in a given sentence. This leads to dense vectors (in a lower-dimensional space) that will more accurately capture relationships between words. The process is described in [this paper from Tomas Mikolov et al](https://arxiv.org/abs/1301.3781v3).
 
 **Image: Most Common 25 Unigrams**
 
@@ -116,6 +118,12 @@ Below I have included some recommendations of next steps that could yield better
 - **Data quality and quantity:** As mentioned in the 'Limitations' section, I believe that some models would show improvement if the data was better labeled and if there was more of it. For use in a real-life setting, I suspect the model would need a much larger vocabulary to be able to keep up with the diversity of speech on a platform like Reddit.
 - **Hyperparameter tuning and further optimization:** Some methods could be used to exhaustively search over model hyperparameters to find optimal ones. Given the speed of XGBoost and Naive Bayes, these options could be implemented in the future.
 - **Fine-tuning foundational model:** Below my contact information, I have provided some code for initializing and implementing BERT, an extremely large and complex language model deployed by HuggingFace. Fine-tuning this model on our data could yield exceedingly good results, but would take hours or days to train.
+
+## Sources
+Mikolov, Tomas et al. (2013). Efficient Estimation of Word Representations in Vector Space. [arXiv:1301.3781](https://arxiv.org/abs/1301.3781v3) [cs.CL].
+
+Schmidt, Robin L. (2019). Recurrent Neural Networks (RNNs): A gentle Introduction and Overview. [arXiv:1912.05911](https://arxiv.org/abs/1912.05911) [cs.LG].
+
 ## Contact Information
 - Email: apell7591@gmail.com
 - Phone: 917-434-6615
